@@ -24,7 +24,7 @@ def retrieve_input():
 
     vcfs = [vcf for vcf in vcf_path.glob('*.vcf')]
     if not vcfs:
-        messagebox.showerror("Error!", "Can't find vcf files in given path. Make sure they're not gzipped. I don't have time to add gzip support.")
+        messagebox.showerror("Error!", "Can't find vcf files in given path. Make sure they're not gzipped.")
 
     filtered_path = vcf_path.joinpath('filtered')
     filtered_path.mkdir(exist_ok=True, parents=True)
